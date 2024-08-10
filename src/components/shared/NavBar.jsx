@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const NavBar = () => {
@@ -37,7 +38,9 @@ const NavBar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
+                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/all-shoes">All-Shoes</Link></li>
+                    <li><Link href="/gallery">Gallery</Link></li>
                     <li>
                         <details>
                             <summary>Parent</summary>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = {
   title: "Home Page",
@@ -8,15 +9,15 @@ export const metadata = {
 const HomePage = async () => {
   const res = await fetch("http://localhost:5000/shoes", {
     // cache: "force-cache"
-    next : {
-      revalidate : 30
+    next: {
+      revalidate: 30
     }
   });
   const shoes = await res.json();
 
   return (
-    <div>
-      <h2 className='text-3xl text-center'>This is home page 222</h2>
+    <div className="text-center">
+      <h2 className='text-3xl text-center'>This is home page </h2>
 
       <div className="grid grid-cols-3 gap-14 px-10">
         {
@@ -48,6 +49,11 @@ const HomePage = async () => {
         }
       </div>
 
+      <Link href="/all-shoes">
+        <button className="btn w-[150px] btn-outline btn-secondary my-5">
+          Show More
+        </button>
+      </Link>
 
     </div>
   );
