@@ -15,6 +15,8 @@ const HomePage = async () => {
   });
   const shoes = await res.json();
 
+  // throw new Error("Error From Home Page")
+
   return (
     <div className="text-center">
       <h2 className='text-3xl text-center'>This is home page </h2>
